@@ -17,9 +17,8 @@ python3 -m venv venv
 source activate venv/bin/activate
 ```
 
-3. Install dependencies(cd into backend directory first)
+3. Install dependencies
 ```
-cd backend
 pip install -r requirements.txt
 ```
 
@@ -32,6 +31,7 @@ DATABASE_URL = "postgresql://postgres:password@localhost:5433/test_db"
 
 5. Run dev server
 ```
+cd backend # cd into backend directory
 uvicorn main:app --reload
 ```
 
