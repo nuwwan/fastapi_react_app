@@ -16,7 +16,7 @@ interface DataType {
     points: number;
 }
 
-const Items = () => {
+const PlayerDetailsTable = () => {
     const columns: TableProps<TPlayer>['columns'] = [
         {
             title: 'Rank',
@@ -97,12 +97,12 @@ const Items = () => {
         setUpdatePlayerModalOpen(false)
     }
 
-    const handleUpdatePlayer = (name: string,points:number) => {
-        if(selectedPlayer){
-            updatePlayer({...selectedPlayer,name:name,points:points}).then((res) => setPlayers(res.data))
+    const handleUpdatePlayer = (name: string, points: number) => {
+        if (selectedPlayer) {
+            updatePlayer({ ...selectedPlayer, name: name, points: points }).then((res) => setPlayers(res.data))
             setSelectedPlayer(undefined)
         }
-        
+
     }
 
     return (<div>
@@ -115,4 +115,4 @@ const Items = () => {
     </div>)
 }
 
-export default Items
+export default PlayerDetailsTable
