@@ -23,7 +23,14 @@ cd backend
 pip install -r requirements.txt
 ```
 
-4. Run dev server
+4. Change the Database connection String.
+
+Go to file backend/config.py and change the following line.
+```
+DATABASE_URL = "postgresql://postgres:password@localhost:5433/test_db"
+```
+
+5. Run dev server
 ```
 uvicorn main:app --reload
 ```
