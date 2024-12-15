@@ -1,6 +1,12 @@
 from fastapi import FastAPI
+from models import Base
+
+# from . import models
+from config import engine
 
 app = FastAPI()
+
+Base.metadata.create_all(bind=engine)
 
 
 @app.get("/")
